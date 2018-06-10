@@ -6,6 +6,8 @@
 ```console
 $ ls <FOO>
 hest
-$ time
+$ date
+$ time date
+$ echo Fooo
 ```
 Bar baz.
