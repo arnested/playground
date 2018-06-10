@@ -5,4 +5,5 @@
 
 ```console
 $ ls <FOO>
+$ time
 ```
