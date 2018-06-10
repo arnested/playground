@@ -5,5 +5,7 @@
 
 ```console
 $ ls <FOO>
+hest
 $ time
 ```
+Bar baz.
