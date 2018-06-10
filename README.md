@@ -3,6 +3,6 @@
 * bar
 * baz
 
-```shell
+```console
 $ ls <FOO>
 ```
