@@ -1,0 +1,10 @@
+on: push
+name: Debug
+jobs:
+  composer_validate:
+    name: Debug
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo ref ${{ github.ref }}
+          echo sha ${{ github.sha }}
