@@ -1,4 +1,4 @@
-on: push
+on: pull_request
 name: Debug
 jobs:
   dump:
@@ -34,8 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          export GITHUB_API_URL="https://api.github.com/repos/arnested/playground/statuses/${{ github.sha }}"
+          export GITHUB_API_URL="https://api.github.com/repos/arnested/playground/statuses/${{ github.event.after }}"
           export STATE="success"
           export ARTIFACT_URL="https://arnested"
-          export STATUS_DATA="{\"state\": \"${STATE}\", \"description\": \"Push status\", \"context\": \"push status\", \"target_url\": \"${ARTIFACT_URL}\"}"
+          export STATUS_DATA="{\"state\": \"${STATE}\", \"description\": \"Pull request status\", \"context\": \"pull request status\", \"target_url\": \"${ARTIFACT_URL}\"}"
           curl --fail --silent -X POST --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" --url "$GITHUB_API_URL" --header "Content-Type: application/json" --data "$STATUS_DATA"
