@@ -8,3 +8,13 @@ jobs:
       - run: |
           echo ref ${{ github.ref }}
           echo sha ${{ github.sha }}
+  status:
+    name: Status
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          export GITHUB_API_URL="https://api.github.com/repos/arnested/playground/statuses/${{ github.sha }}"
+          export STATE="success"
+          export ARTIFACT_URL="https://arnested"
+          export STATUS_DATA="{\"state\": \"${STATE}\", \"description\": \"My homepage\", \"context\": \"test status\", \"target_url\": \"${ARTIFACT_URL}\"}"
+          curl -X POST --header "authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" --url "$GITHUB_API_URL" --header "content-type: application/json" --data "$STATUS_DATA"
