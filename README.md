@@ -11,4 +11,3 @@ $ time date
 $ echo Fooo
 ```
 Bar baz.
-Foo
