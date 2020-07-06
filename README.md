@@ -13,3 +13,4 @@ $ echo Fooo
 Bar baz.
 Foo
 Moo
+Moo 2
