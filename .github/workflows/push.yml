@@ -47,6 +47,7 @@ jobs:
           onlyLastTag: "true"
           stripHeaders: "true"
           stripGeneratorNotice: "true"
+          simpleList: true
       - name: Create release
         if: ${{ steps.version.outputs.new_tag }} != ""
         uses: actions/create-release@v1
@@ -58,4 +59,3 @@ jobs:
           body: ${{ steps.generate-changelog.outputs.changelog }}
           draft: false
           prerelease: false
-          simpleList: true
