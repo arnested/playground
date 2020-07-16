@@ -15,3 +15,4 @@ Foo
 Moo
 Moo 2
 FOO
+FOO
