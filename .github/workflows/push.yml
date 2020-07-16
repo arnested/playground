@@ -58,3 +58,4 @@ jobs:
           body: ${{ steps.generate-changelog.outputs.changelog }}
           draft: false
           prerelease: false
+          simpleList: true
