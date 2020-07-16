@@ -14,3 +14,4 @@ Bar baz.
 Foo
 Moo
 Moo 2
+FOO
