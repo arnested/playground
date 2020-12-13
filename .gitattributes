@@ -1,3 +1,3 @@
 vendor/* linguist-generated
 README export-subst
-LICENSE linguist-language=markdown
+LICENSE linguist-detectable=true linguist-language=markdown
