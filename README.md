@@ -1,5 +1,5 @@
-<title>
-  Min hest
+<title> 
+Min hest
 </title>
 
 # Foo
