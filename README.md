@@ -1,4 +1,6 @@
-<title>Min hest</title>
+<title>
+  Min hest
+</title>
 
 # Foo
 
