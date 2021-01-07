@@ -1,3 +1,5 @@
+<title>Min hest</title>
+
 # Foo
 
 * bar
