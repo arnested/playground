@@ -1,1 +1,1 @@
-FROM pjcdawkins/platformsh-cli:latest@sha256:89bed71b9ddffe1fde22baa90fcf82a506074e9c8e37b939f80cd5eba58e0e83
+FROM pjcdawkins/platformsh-cli:latest@sha256:262d420e155959fc12d1a82cfc4d7bd011a41075a6c7c347d8c1d1c6c6b3b9ce
