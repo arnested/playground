@@ -7,6 +7,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: '0'
+      - run: |
+          echo Default branch: ${{ github.event.repository.default_branch }}
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
