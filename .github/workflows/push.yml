@@ -9,7 +9,7 @@ jobs:
           fetch-depth: '0'
       - name: Shoutrrr ${{ github.event.repository.default_branch_foo }}
         if: ${{ false }}
-        uses: containrrr/shoutrrr-action@v1
+        uses: containrrr/shoutrrr-action@v1.0.4
         with:
           url: hangouts://chat.googleapis.com/v1/spaces/AAAAyeSJ9u0/messages?key=${{ secrets.HANGOUTS_KEY }}
           message: Default branch is ${{ github.event.repository.default_branch }}.
