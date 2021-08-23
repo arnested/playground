@@ -4,6 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          echo Default branch: ${{ github.ref == env.default_branch_ref }}
       - uses: actions/checkout@v2
         with:
           fetch-depth: '0'
