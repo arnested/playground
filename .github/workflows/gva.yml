@@ -11,3 +11,4 @@ jobs:
         with:
           unstable: true
           patch-level: true
+          unsupported: false
