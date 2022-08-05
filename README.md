@@ -22,4 +22,3 @@ FOO
 FOO
 FOO
 FOO
-Timestamp:
