@@ -22,3 +22,5 @@ FOO
 FOO
 FOO
 FOO
+
+[<kbd> <br>&nbsp;<b>GO TO EXAMPLE<b>&nbsp;<br> <br> </kbd>](https://example.com)
