@@ -7,6 +7,8 @@ jobs:
       - name: Foo
         uses: arnested/playground-action@v1
       - name: Foo
+        uses: arnested/playground-action@b8f239ab74b0e4a1c84b7facf836b1b4bcce085d
+      - name: Foo
         uses: arnested/playground-action@v1.2
       - name: Foo
         id: act
