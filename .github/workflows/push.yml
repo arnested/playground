@@ -13,8 +13,6 @@ jobs:
       - name: Foo
         id: act
         uses: arnested/playground-action@v1
-      - name: Foo
-        uses: arnested/playground-action
       - run: |
           curl --fail --silent -X POST --user ":${{github.token}}" "https://api.github.com/repos/arnested/playground/statuses/${{ github.sha }}" --data "{\"state\": \"pending\", \"description\": \"foo bar\", \"context\": \"Visual regression test\"}"
       - run: |
