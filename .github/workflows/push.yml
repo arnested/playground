@@ -4,8 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Foo
-        uses: arnested/playground-action@v1
+      - run: env
       - name: Foo
         uses: arnested/playground-action@v1
       - run: |
