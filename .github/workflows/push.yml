@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: cat /home/runner/work/_actions/arnested/playground-action/v1/action.yml
+      - run: ls -lA /home/runner/work/_actions/arnested/playground-action/v1/
       - name: Foo
         uses: arnested/playground-action@v1
       - run: |
