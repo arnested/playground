@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: env
+      - run: ls -lR "${HOME}"
       - name: Foo
         uses: arnested/playground-action@v1
       - run: |
