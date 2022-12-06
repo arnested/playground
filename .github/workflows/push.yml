@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls -lA /home/runner/work/_actions/arnested/playground-action/v1/
-      - name: Foo
+      - name: Foo bar
         uses: arnested/playground-action@v1
       - run: |
           curl --fail --silent -X POST --user ":${{github.token}}" "https://api.github.com/repos/arnested/playground/statuses/${{ github.sha }}" --data "{\"state\": \"pending\", \"description\": \"foo bar\", \"context\": \"Visual regression test\"}"
