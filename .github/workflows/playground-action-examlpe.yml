@@ -9,7 +9,9 @@ jobs:
     steps:
       - name: Run the action from the prebuilt container
         uses: arnested/playground-action@v1
+
       - name: The action only consists of the action.yaml thanks to export-ignore
-        run: ls -lA /home/runner/work/_actions/arnested/playground-action/v1/
+        run: ls -lA /home/runner/work/_actions/arnested/playground-action/v1
+
       - name: export-subst has added the SHA
         run: cat /home/runner/work/_actions/arnested/playground-action/v1/action.yml
