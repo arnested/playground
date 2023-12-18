@@ -1,0 +1,17 @@
+name: Approve failure
+
+on: pull-request
+
+jobs:
+  apt:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - run:
+          mkdir -p ~/foo
+          touch ~/foo/test.deb
+      - uses: arnested/apt-ftparchive@main
+        with:
+          input-directory: ~/foo
+        id: apt
+      - run: ls -lR ${steps.apt.outputs.output-directory}
