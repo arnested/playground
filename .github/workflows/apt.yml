@@ -1,17 +1,18 @@
-name: Approve failure
+name: APT
 
-on: pull-request
+on: pull_request
 
 jobs:
   apt:
+    name: Build APT test
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - run:
-          mkdir -p ~/foo
-          touch ~/foo/test.deb
       - uses: arnested/apt-ftparchive@main
         with:
-          input-directory: ~/foo
+          gpg-signing-key: ${{ secrets.GPG_SIGNING_KEY }}
+          input-directory: foo
+        env:
+          APT_CONFIG: ${{ runner.workspace }}/aptftp.conf
         id: apt
-      - run: ls -lR ${steps.apt.outputs.output-directory}
+      - run: ls -lR ${{ steps.apt.outputs.output-directory }}
