@@ -44,3 +44,7 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+      - name: Retry?
+        run: |
+          sudo apt-get install --yes retry
+          retry -h
