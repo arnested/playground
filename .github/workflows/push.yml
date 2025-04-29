@@ -4,11 +4,18 @@ on: [ push, workflow_dispatch ]
 env:
   VERSION: 1.24.2
 
+permissions:
+  security-events: write
+
 jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      - name: Fetch alerts using REST API to trigger bad token alert
+        run: gh api /repos/${{ github.repository }}/dependabot/alerts
+        env:
+          GH_TOKEN: ${{ github.token }}
       - id: go-cache
         shell: bash
         run: |
