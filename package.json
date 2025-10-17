@@ -1,0 +1,14 @@
+{
+  "name": "playground",
+  "version": "1.0.1",
+  "description": "<title>  Min hest </title>",
+  "main": "vpn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "experiment": "github:reload/sqlc-gen-typescript#v0.0.5"
+  }
+}
