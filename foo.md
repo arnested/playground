@@ -1,1 +1,1 @@
-<p>License {{ site.github }}</p>
+<pre>{{ site.github }}</pre>
